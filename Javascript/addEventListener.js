@@ -32,3 +32,4 @@ function light() {
   body.classList.replace('dark', 'light');
   localStorage.setItem('theme', 'light');
 }
+

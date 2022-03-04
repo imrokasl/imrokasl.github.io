@@ -2,4 +2,4 @@
 
 My portfolio
 
-Version 2.03
+Version 2.04
