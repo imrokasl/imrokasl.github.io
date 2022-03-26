@@ -2,4 +2,4 @@
 
 My portfolio
 
-Version 2.06
+Version 2.07

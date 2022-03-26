@@ -257,7 +257,7 @@ h2 {
   background-position: left;
 }
 /* About Me end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-/* Work start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* My projects start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .WorkFlexBox1 {
   width: 300px;
   height: 350px;
@@ -277,7 +277,6 @@ h2 {
 
 img {
   width: 90%;
-  margin: auto;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -300,8 +299,18 @@ img {
 .WorkFlexBox1 > h3 {
   margin: 5px;
 }
+#MyProjectsButton {
+  margin-top: 20px;
+  box-shadow: var(--border-shadow);
+  border-radius: var(--border-rad);
+  background-color: var(--color-primary);
+  border: var(--border);
+  background-color: var(--color-accent);
+  width: 100px;
+  cursor: pointer;
+}
 
-/* Work end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* My projects end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 footer > p {
   padding: 1em;
@@ -317,6 +326,22 @@ footer {
 
 #footerText2 {
   display: none;
+  margin: auto;
+}
+
+.viewbutton {
+  margin-top: 10px;
+  background-color: var(--background-color);
+  border-radius: var(--border-rad);
+  border: var(--border);
+  box-shadow: var(--border-shadow);
+  display: inline-block;
+  padding: 3px 10px;
+  transition: transform 0.3s ease-out;
+}
+
+.viewbutton:hover {
+  transform: translate(0, -10px);
 }
 
 /* For mobile start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
