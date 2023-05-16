@@ -21,7 +21,7 @@ HTML {
 :root {
   --color-primary: #2584ff;
   --color-secondary: #609ec7;
-  --color-accent: #ff5429;
+  --color-accent: #ff5329;
   --color-LinkHover: #29ff53;
   --border-rad: 3px;
 }
@@ -400,7 +400,7 @@ header li {
 }
 @media (max-width: 600px) {
   header li {
-    font-size: 13px;
+    font-size: 14px;
   }
   [id="light"],
   [id="dark"] {
@@ -423,7 +423,8 @@ header li {
 
 @media (max-width: 420px) {
   header li {
-    font-size: 10px;
+    font-size: 13px;
+    padding: 15px 3px;
   }
 }
 
