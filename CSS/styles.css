@@ -21,7 +21,8 @@ HTML {
 :root {
   --color-primary: #2584ff;
   --color-secondary: #609ec7;
-  --color-accent: #ff5329;
+  --color-accent: #ff5429;
+  --color-LinkHover: #29ff53;
   --border-rad: 3px;
 }
 
@@ -36,11 +37,16 @@ body {
   background-color: var(--color-accent);
 }
 
-/* add height to fix footer*/
-main {
-  height: 1700px;
+html,
+body {
+  height: 100% !important;
 }
 
+/* add height to fix footer
+main {
+  height: auto;
+}
+*/
 /* Theme start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .dark {
@@ -50,6 +56,9 @@ main {
   --background-color: #111;
   --color-slide: black;
   --filter-background: brightness(100%) opacity(0.03);
+  --popup-transperant: rgba(39, 39, 39, 0.91);
+  --input-text: #d7d6eb;
+  --border-focus: 5px solid hsla(12, 100%, 58%, 0.2);
 }
 
 .light {
@@ -59,6 +68,9 @@ main {
   --background-color: #d7d6eb;
   --color-slide: hsla(0, 0%, 0%, 0.2);
   --filter-background: brightness(40%) opacity(0.07);
+  --popup-transperant: rgba(147, 147, 147, 0.9);
+  --input-text: #111;
+  --border-focus: 5px solid hsla(12, 100%, 58%, 0.2);
 }
 
 /* Theme end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -71,12 +83,13 @@ main {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  position: relative;
 }
 
 /* Home start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 #aboutMe::before {
-  background: url(/img/backgroud1.svg);
+  background-image: url(/img/backgroud1.svg);
   width: 100%;
   height: 1650px;
   filter: var(--filter-background);
@@ -259,16 +272,17 @@ h2 {
 /* About Me end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* My projects start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .WorkFlexBox1 {
-  width: 300px;
-  height: 350px;
+  width: 80%;
+  height: auto;
   box-shadow: var(--border-shadow);
   border: var(--border);
   border-radius: var(--border-rad);
   overflow: hidden;
   background-color: var(--color-primary);
   margin: 1rem;
-  margin: 20px auto auto auto;
+  margin: 30px auto auto auto;
   transition: transform 0.3s ease-out;
+  min-width: 40%;
 }
 
 .WorkFlexBox1:hover {
@@ -310,23 +324,45 @@ img {
   cursor: pointer;
 }
 
+p {
+  padding-bottom: 10px;
+}
+
+#iframe1 {
+  display: none;
+  width: 90%;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* My projects end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 footer > p {
   padding: 1em;
   margin: unset;
+  display: inline;
+}
+
+#contactinfo {
+  color: var(--color-LinkHover);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+[href="mail/PGP-key.txt"] {
+  color: var(--color-LinkHover);
+  font-weight: bold;
 }
 
 footer {
   transition: background-color 0.5s;
   background-color: var(--color-primary);
   text-align: center;
-  font-weight: bold;
-}
-
-#footerText2 {
-  display: none;
-  margin: auto;
+  position: absolute;
+  width: 100%;
+  padding: 20px 0 20px 0;
 }
 
 .viewbutton {
@@ -338,26 +374,59 @@ footer {
   display: inline-block;
   padding: 3px 10px;
   transition: transform 0.3s ease-out;
+  margin-bottom: 5px;
+  color: var(--color-text);
 }
 
 .viewbutton:hover {
   transform: translate(0, -10px);
+  color: var(--color-accent);
 }
 
 /* For mobile start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-@media (max-width: 1100px) {
-  main {
-    height: 2600px;
-  }
 
-  #aboutMe::before {
-    height: 2550px;
-  }
-  header li {
-    font-size: 15px;
-    padding: 15px 8px;
+#aboutMe::before {
+  height: 2550px;
+}
+header li {
+  font-size: 20px;
+  padding: 15px 8px;
+}
+@media (max-width: 1000px) {
+  .WorkFlexBox2 {
+    width: 60% !important;
+    min-width: auto !important;
   }
 }
+@media (max-width: 600px) {
+  header li {
+    font-size: 13px;
+  }
+  [id="light"],
+  [id="dark"] {
+    font-size: 15px;
+  }
+  .dropDown {
+    width: 250px !important;
+  }
+  .WorkFlexBox2 {
+    width: 90% !important;
+    min-width: auto !important;
+  }
+  .centered32{
+    font-size: 15px;
+  }
+  input{
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 420px) {
+  header li {
+    font-size: 10px;
+  }
+}
+
 /* For mobile end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* DropDown start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .dropDown {
@@ -410,3 +479,130 @@ footer {
 }
 
 /* DropDown end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*  testing waters here !!!!!!!!!!!!!!!!!!!!! */
+
+.bg-image {
+  background-image: url(/img/backgroud1.svg);
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  filter: var(--filter-background);
+  position: fixed;
+  animation-name: pop;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  pointer-events: none;
+}
+
+/*  text on the image !!!!!!!!!!!!!!!!!!!!! */
+
+.textContainer {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.textContainer > span > p {
+  background-color: var(--color-secondary);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Centered text */
+.centered32 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*  autodesk maya icon !!!!!!!!!!!!!!!!!!!!! */
+/*  email popup !!!!!!!!!!!!!!!!!!!!! */
+#mailPopup {
+  background-color: var(--popup-transperant);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  display: none;
+}
+#mali {
+  color: var(--color-LinkHover);
+}
+
+.close {
+  margin-left: 95%;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.WorkFlexBox2 {
+  width: 40%;
+  height: auto;
+  min-height: 150px;
+  box-shadow: var(--border-shadow);
+  border: var(--border);
+  border-radius: var(--border-rad);
+  overflow: hidden;
+  background-color: var(--background-color);
+  margin: 30px auto auto auto;
+  transition: transform 0.3s ease-out;
+}
+
+.text11 > p {
+  display: inline;
+  font-weight: bold;
+}
+
+.contactinfo{
+  text-align: center;
+}
+
+.text11 {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.PGPtext{
+  font-size: 15px;
+}
+.PGPtext > *{
+  display: inline;
+}
+
+
+#a1{
+  display: inline-block;
+  height: 0; width: 0; overflow: hidden;
+  -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+
+#a2{
+  position: absolute; top: -99999px;
+  -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+
+.links{
+  color: var(--color-LinkHover);
+}
+
+
+/* form css start --------------------------------------------------------------------------------------- */
+
+input{
+  width: 60%;
+  box-shadow: var(--border-shadow);
+  border: var(--border);
+  border-radius: var(--border-rad);
+  background-color: var(--background-color);
+  color: var(--color-text);
+  margin: 15px auto 15px auto;
+  transition: transform 0.3s ease-out;
+}
+
+.emailform, .messageform{
+  display: block;
+}
+
+/* form css end --------------------------------------------------------------------------------------- */

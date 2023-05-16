@@ -1,5 +1,3 @@
-# imrokasl.github.io
-
 My portfolio
 
-Version 2.08
+Version 2.18

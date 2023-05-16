@@ -3,4 +3,6 @@ footer + p {
   background-color: var(--color-accent);
   padding: 10px;
   margin: 0;
+  position: relative;
+  top: 60px;
 }
