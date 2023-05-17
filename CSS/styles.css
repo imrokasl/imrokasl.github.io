@@ -366,7 +366,7 @@ footer {
 }
 
 .viewbutton {
-  margin-top: 10px;
+  margin: 10px auto 5px auto;
   background-color: var(--background-color);
   border-radius: var(--border-rad);
   border: var(--border);
@@ -374,7 +374,6 @@ footer {
   display: inline-block;
   padding: 3px 10px;
   transition: transform 0.3s ease-out;
-  margin-bottom: 5px;
   color: var(--color-text);
 }
 
@@ -598,12 +597,12 @@ input{
   border-radius: var(--border-rad);
   background-color: var(--background-color);
   color: var(--color-text);
-  margin: 15px auto 15px auto;
+  margin: 10px auto 15px auto;
   transition: transform 0.3s ease-out;
 }
 
-.emailform, .messageform{
-  display: block;
+#my-form-button{
+  cursor: pointer;
 }
 
 /* form css end --------------------------------------------------------------------------------------- */
