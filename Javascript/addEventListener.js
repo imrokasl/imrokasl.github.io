@@ -170,5 +170,22 @@ async function handleSubmit(event) {
 form.addEventListener("submit", handleSubmit);
 
 // forum submit script end ------------------------------------------------
+// for electron app -----------------------------------------------
+function runCodeInElectron() {
+  // Check if the user agent contains "Electron"
+  if (navigator.userAgent.includes("Electron")) {
+    // Code to run in Electron app
+    console.log("Running code in Electron!");
+    
+    // Create and configure the link element
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "CSS/electron.css";
+    document.head.appendChild(link);
+
+  }
+}
+runCodeInElectron();
+
 
 
