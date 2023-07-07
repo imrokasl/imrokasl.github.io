@@ -20,4 +20,3 @@ function decodeEmail() {
       });
   }
   //email decode end--------------------------------
-  

@@ -56,7 +56,7 @@ main {
   --background-color: #111;
   --color-slide: black;
   --filter-background: brightness(100%) opacity(0.03);
-  --popup-transperant: rgba(39, 39, 39, 0.91);
+  --popup-transperant: rgba(39, 39, 39, 0.61);
   --input-text: #d7d6eb;
   --border-focus: 5px solid hsla(12, 100%, 58%, 0.2);
 }
@@ -68,7 +68,7 @@ main {
   --background-color: #d7d6eb;
   --color-slide: hsla(0, 0%, 0%, 0.2);
   --filter-background: brightness(40%) opacity(0.07);
-  --popup-transperant: rgba(147, 147, 147, 0.9);
+  --popup-transperant: rgba(147, 147, 147, 0.5);
   --input-text: #111;
   --border-focus: 5px solid hsla(12, 100%, 58%, 0.2);
 }
@@ -420,10 +420,16 @@ header li {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 426px) {
+  header li {
+    font-size: 14px;
+    padding: 15px 2px;
+  }
+}
+@media (max-width: 358px) {
   header li {
     font-size: 13px;
-    padding: 15px 3px;
+    padding: 15px 1px;
   }
 }
 
@@ -521,6 +527,7 @@ header li {
 /*  email popup !!!!!!!!!!!!!!!!!!!!! */
 #mailPopup {
   background-color: var(--popup-transperant);
+  backdrop-filter: blur(7px);
   width: 100%;
   height: 100%;
   position: fixed;

@@ -23,8 +23,9 @@
   <div id="mailPopup">
     <div class="WorkFlexBox2">
       <div class="contactinfo">
-        <span class="close" onclick="closesmail()">&#10006;</span>
+        <span class="close" onclick="closesmail(), RPorfolio()">&#10006;</span>
         <div class="text11">
+          <p>Contact me via form</p>
           <form id="my-form" action="https://formspree.io/f/myyavnzj" method="POST">
             <label>Your email:</label>
             <div>
@@ -37,7 +38,9 @@
             <button class="viewbutton" id="my-form-button">Send</button>
             <p id="my-form-status"></p>
           </form>
+          <span> or write me an email
           <span id="mali"></span>
+        </span>
         </div>
         <p>
           Link to my
@@ -67,7 +70,7 @@
           <li class="transform"><a href="#Home">Home</a></li>
           <li class="transform"><a href="#aboutMe1">About me</a></li>
           <li class="transform"><a href="#Myprojects">My projects</a></li>
-          <li onclick="mailPopup()" class="transform">
+          <li onclick="mailPopup(), RContacts()" class="transform">
             <a href="#">Contacts</a>
           </li>
         </ul>
@@ -156,9 +159,10 @@
     </div>
   </main>
   <footer id="footer">
-    <p id="contactinfo" onclick="mailPopup()">Contact me.</p>
+    <p id="contactinfo" onclick="mailPopup(), RContacts()">Contact me.</p>
     <p id="footerText1">Made by Rokas.</p>
   </footer>
+  <script  id="humanverified" ></script>
   <script src="Javascript/addEventListener.js"></script>
 </body>
 

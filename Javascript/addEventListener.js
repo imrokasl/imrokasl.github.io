@@ -1,17 +1,62 @@
-/*document.getElementById("footer").addEventListener("mouseover", function () {
-  document.getElementById("footerText1").style.display = "none";
-  document.getElementById("footerText2").style.display = "block";
+// Easter egg :) try to find it
+// Find the footer element
+function secretmessage(){
+
+const link = Object.assign(document.createElement('link'), {
+  rel: 'stylesheet',
+  href: 'CSS/Easteregg.css'
 });
 
-document.getElementById("footer").addEventListener("mouseout", function () {
-  document.getElementById("footerText2").style.display = "none";
-  document.getElementById("footerText1").style.display = "block";
-}); 
-*/
-// Easter egg :) try to find it
-var _0x894612=_0x5ba7;!function($,x){for(var _=_0x5ba7,t=$();;)try{if(-parseInt(_(352))/1*(parseInt(_(355))/2)+-parseInt(_(369))/3+parseInt(_(363))/4+parseInt(_(360))/5+parseInt(_(365))/6+-parseInt(_(353))/7+-parseInt(_(359))/8*(parseInt(_(370))/9)==841658)break;t.push(t.shift())}catch(e){t.push(t.shift())}}(_0x3893,841658);var clicks=0;function _0x5ba7($,x){var _=_0x3893();return(_0x5ba7=function($,x){return _[$-=352]})($,x)}function _0x3893(){var $=["<p>\uD83D\uDC25You found me the easter egg \uD83E\uDD5A</p>","126liMhHZ","afterend","footer","congratulations!","8kknhdK","5513010YJyuuB","getElementById","scrollBy","5781804XfuEZw","addEventListener","6681642gBtKEP","click",'<link rel="stylesheet" href="CSS/Easteregg.css">',"insertAdjacentHTML","3947667rStljS","5068161cWvpGQ","2397MrIvkd","5529811TVjwKi",];return(_0x3893=function(){return $})()}document[_0x894612(361)](_0x894612(357))[_0x894612(364)](_0x894612(366),function(){var $=_0x894612;5==(clicks+=1)&&(console.log($(358)),(node=document[$(361)]($(357)))[$(368)]($(356),$(367)),node[$(368)]($(356),$(354)),window[$(362)](0,100))});
+document.querySelector('head').appendChild(link);
 
-//theme buttons start-----------------------------------------------
+const footer = document.querySelector('footer');
+
+const paragraph = document.createElement('p');
+paragraph.textContent = '🔴';
+footer.insertAdjacentElement('afterend', paragraph);
+
+function scroll200(){
+window.scrollTo({
+  top: document.documentElement.scrollHeight,
+  behavior: 'smooth'
+});
+}
+setTimeout(function() {
+  scroll200()
+}, 200);
+
+setTimeout(function() {
+  scroll200()
+}, 400);
+
+setTimeout(function() {
+  scroll200()
+}, 600);
+
+setTimeout(function() {
+  scroll200()
+}, 800);
+
+sessionStorage.setItem("NICE", "🔴 (Dont forget to write me an email!!)");
+}
+// counter--------
+const footer = document.querySelector('footer');
+
+let clickCount = 0;
+
+function handleClick() {
+  clickCount++;
+
+  if (clickCount === 10) {
+    secretmessage()
+  }
+}
+
+// Add a click event listener to the footer
+footer.addEventListener('click', handleClick);
+
+
+//theme buttons start--------------------------------------------------------------------------
 // Theme
 const body = document.body;
 
@@ -29,15 +74,15 @@ try {
   }
 
   // Button function Handlers
-function dark() {
-  body.classList.replace("light", "dark");
-  localStorage.setItem("theme", "dark");
-}
+  function dark() {
+    body.classList.replace("light", "dark");
+    localStorage.setItem("theme", "dark");
+  }
 
-function light() {
-  body.classList.replace("dark", "light");
-  localStorage.setItem("theme", "light");
-}
+  function light() {
+    body.classList.replace("dark", "light");
+    localStorage.setItem("theme", "light");
+  }
 } catch (error) {
   // Code to handle the error (can be omitted)
 
@@ -63,7 +108,7 @@ document.getElementById("house").addEventListener("click", function () {
 //popup code
 function mailPopup() {
   document.querySelector("#mailPopup").style.display = "block";
-  /* decodeEmail() */
+  decodeEmail()
 }
 function closesmail() {
   document.getElementById('mailPopup').style.display = 'none';
@@ -71,7 +116,6 @@ function closesmail() {
 
 // theme code end --------------------------------------
 
-/* 
 // bot detector -------------------------------------
 // Function to detect bots
 function detectBot() {
@@ -91,36 +135,36 @@ function detectBot() {
     }
   }
 
-    // Check if local storage is available
-    try {
-      localStorage.setItem("test", "test");
-      localStorage.removeItem("test");
-    } catch (e) {
-      isBot = true;
-    }
+  // Check if local storage is available
+  try {
+    localStorage.setItem("test", "test");
+    localStorage.removeItem("test");
+  } catch (e) {
+    isBot = true;
+  }
 
   return isBot;
 }
- // bot testing
-function detectBot() {
-  return true;
-} 
+// bot testing
+//  function detectBot() {
+//    return true;
+// } 
 
 // Usage
 if (detectBot()) {
   // Detected as a bot
-  document.getElementById("mali").textContent = "[Bot detected. Consider using another browser if you're not a robot.]";
+  document.getElementById("mali").textContent = "[Bot detected. Consider using another browser.]";
   console.log("Bot detected!");
 } else {
   // Likely a human
 
-// add script to element with id "humanverified"
+  // add script to element with id "humanverified"
   var scriptElement = document.getElementById("humanverified");
   scriptElement.src = "Javascript/mailloader.js";
 
   console.log("Likely a human.");
 }
- */
+
 // forum submit script with rate limiting ---------------------------------------------
 
 var form = document.getElementById("my-form");
@@ -129,11 +173,11 @@ var lastSubmissionTime = localStorage.getItem("lastSubmissionTime"); // Retrieve
 async function handleSubmit(event) {
   event.preventDefault();
   var status = document.getElementById("my-form-status");
-  
+
   // Calculate the current time
   var currentTime = new Date().getTime();
-  
-  // Check if the last submission time is null or if it has been more than a minute
+
+  // Check if the last submission time is null or if it has been more than time  ↓↓↓↓↓↓↓ Here
   if (lastSubmissionTime === null || currentTime - parseInt(lastSubmissionTime) > 120000) {
     var data = new FormData(event.target);
     fetch(event.target.action, {
@@ -146,7 +190,7 @@ async function handleSubmit(event) {
       if (response.ok) {
         status.innerHTML = "Thanks for your submission!!!";
         form.reset();
-        
+
         // Update the last submission time with the current time and store it in local storage
         lastSubmissionTime = currentTime.toString();
         localStorage.setItem("lastSubmissionTime", lastSubmissionTime);
@@ -187,5 +231,11 @@ function runCodeInElectron() {
 }
 runCodeInElectron();
 
+// document names------------------------------------------------------------
+function RContacts() {
+  document.title = "Rokas Contacts";
+}
 
-
+function RPorfolio() {
+  document.title = "Rokas Porfolio";
+}
