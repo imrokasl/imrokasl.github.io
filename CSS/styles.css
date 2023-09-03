@@ -129,9 +129,11 @@ main {
   0% {
     background-position-y: 0;
   }
+
   50% {
     background-position-y: 50%;
   }
+
   to {
     background-position-y: 100%;
   }
@@ -163,12 +165,9 @@ ul,
 .box1,
 .box2,
 .textLeft {
-  background: linear-gradient(
-      to left,
+  background: linear-gradient(to left,
       rgba(0, 0, 0, 0) 50%,
-      var(--color-slide) 50%
-    )
-    right;
+      var(--color-slide) 50%) right;
   background-size: 200%;
   transition: transform 0.5s ease-out, background-position 0.3s ease-out;
   border: var(--border);
@@ -204,7 +203,7 @@ h2 {
   margin: 0;
 }
 
-.box2 > div > img {
+.box2>div>img {
   height: 130px;
 }
 
@@ -231,6 +230,24 @@ h2 {
 }
 
 /* My skills end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* order box !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#orderBox > p{
+  text-align: center;
+  background-color: #29bfff80;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 0px 35px #29bfff80;
+  
+}
+
+#orderBox{
+  max-width: 500px;
+  border-radius: 30px;
+}
+
+
+/* order box !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! *
 /* About Me !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .title1 {
@@ -251,7 +268,7 @@ h2 {
   overflow: auto;
 }
 
-.textLeft > p {
+.textLeft>p {
   margin: 10px;
 }
 
@@ -269,6 +286,7 @@ h2 {
   transform: translate(0, -10px);
   background-position: left;
 }
+
 /* About Me end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* My projects start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .WorkFlexBox1 {
@@ -295,7 +313,7 @@ img {
   object-fit: cover;
 }
 
-.WorkFlexBox1 > p {
+.WorkFlexBox1>p {
   font-size: 20px;
   margin: 0;
 }
@@ -310,9 +328,10 @@ img {
   margin: auto;
 }
 
-.WorkFlexBox1 > h3 {
+.WorkFlexBox1>h3 {
   margin: 5px;
 }
+
 #MyProjectsButton {
   margin-top: 20px;
   box-shadow: var(--border-shadow);
@@ -338,7 +357,7 @@ p {
 
 /* My projects end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
-footer > p {
+footer>p {
   padding: 1em;
   margin: unset;
   display: inline;
@@ -375,6 +394,7 @@ footer {
   padding: 3px 10px;
   transition: transform 0.3s ease-out;
   color: var(--color-text);
+  cursor: pointer;
 }
 
 .viewbutton:hover {
@@ -387,35 +407,43 @@ footer {
 #aboutMe::before {
   height: 2550px;
 }
+
 header li {
   font-size: 20px;
   padding: 15px 8px;
 }
+
 @media (max-width: 1000px) {
   .WorkFlexBox2 {
     width: 60% !important;
     min-width: auto !important;
   }
 }
+
 @media (max-width: 600px) {
   header li {
     font-size: 14px;
   }
+
   [id="light"],
   [id="dark"] {
     font-size: 15px;
   }
+
   .dropDown {
     width: 250px !important;
   }
+
   .WorkFlexBox2 {
     width: 90% !important;
     min-width: auto !important;
   }
-  .centered32{
+
+  .centered32 {
     font-size: 15px;
   }
-  input{
+
+  input {
     width: 90% !important;
   }
 }
@@ -426,6 +454,7 @@ header li {
     padding: 15px 2px;
   }
 }
+
 @media (max-width: 358px) {
   header li {
     font-size: 13px;
@@ -510,7 +539,7 @@ header li {
   cursor: pointer;
 }
 
-.textContainer > span > p {
+.textContainer>span>p {
   background-color: var(--color-secondary);
   padding: 5px;
   border-radius: 5px;
@@ -523,6 +552,7 @@ header li {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 /*  autodesk maya icon !!!!!!!!!!!!!!!!!!!!! */
 /*  email popup !!!!!!!!!!!!!!!!!!!!! */
 #mailPopup {
@@ -534,6 +564,7 @@ header li {
   z-index: 999;
   display: none;
 }
+
 #mali {
   color: var(--color-LinkHover);
 }
@@ -557,12 +588,12 @@ header li {
   transition: transform 0.3s ease-out;
 }
 
-.text11 > p {
+.text11>p {
   display: inline;
   font-weight: bold;
 }
 
-.contactinfo{
+.contactinfo {
   text-align: center;
 }
 
@@ -571,33 +602,47 @@ header li {
   margin-bottom: 20px;
 }
 
-.PGPtext{
+.PGPtext {
   font-size: 15px;
 }
-.PGPtext > *{
+
+.PGPtext>* {
   display: inline;
 }
 
 
-#a1{
+#a1 {
   display: inline-block;
-  height: 0; width: 0; overflow: hidden;
-  -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-#a2{
-  position: absolute; top: -99999px;
-  -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+#a2 {
+  position: absolute;
+  top: -99999px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.links{
+.links {
   color: var(--color-LinkHover);
 }
 
 
 /* form css start --------------------------------------------------------------------------------------- */
 
-input{
+input {
   width: 60%;
   box-shadow: var(--border-shadow);
   border: var(--border);
@@ -608,7 +653,7 @@ input{
   transition: transform 0.3s ease-out;
 }
 
-#my-form-button{
+#my-form-button {
   cursor: pointer;
 }
 
