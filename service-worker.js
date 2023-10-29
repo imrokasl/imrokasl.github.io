@@ -21,8 +21,7 @@ self.addEventListener('fetch', event => {
             '/CSS/styles.css',
             '/Javascript/addEventListener.js',
             '/Javascript/mailloader.js',
-            '/Javascript/mailloader2.js',
-            // Add more URLs to cache as needed
+            '/Javascript/mailloader2.js'
           ]);
         })
     );
