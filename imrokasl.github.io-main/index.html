@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex" />
+  <!--
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline';"
+    />
+    -->
+  <meta name="description" content="Rokas portfolio website." />
+  <title>Rokas Porfolio</title>
+  <link rel="stylesheet" href="CSS/normalize.css" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <script src="Libraries/openPGP4.10.10.10.js"></script>
+</head>
+
+<body class="dark">
+  <!-- HAVE FUN POKING AROUND! -->
+  <div id="mailPopup">
+    <div class="WorkFlexBox2">
+      <div class="contactinfo">
+        <span class="close" onclick="closesmail(), RPorfolio()">&#10006;</span>
+        <div class="text11">
+          <p>Contact me via form</p>
+          <form id="my-form" action="https://formspree.io/f/myyavnzj" method="POST">
+            <label>Your email:</label>
+            <div>
+              <input placeholder="Add your email here." type="email" name="email" />
+            </div>
+            <label>Message:</label>
+            <div>
+              <input placeholder="Send me a message..." type="text" name="message" />
+            </div>
+            <button class="viewbutton" id="my-form-button">Send</button>
+            <p id="my-form-status"></p>
+          </form>
+          <span> or write me an email
+            <span id="mali"></span>
+          </span>
+        </div>
+        <!-- <p>
+          Link to my
+          <a class="links" href="https://sketchfab.com/rokasliukenskas" target="_blank">sketchfab.com</a>.
+        </p> -->
+      </div>
+      <span class="PGPtext">
+      </span>
+    </div>
+  </div>
+  <div class="bg-image"></div>
+  <main>
+    <header>
+      <nav>
+        <ul id="topList">
+          <li class="dropDown1 transform">
+            <a href="#">Theme</a>
+            <ul class="dropDown">
+              <li class="dropDownItem">
+                <a href="#" onclick="dark()" id="dark">Dark</a>
+              </li>
+              <li class="dropDownItem">
+                <a href="#" onclick="light()" id="light">Light</a>
+              </li>
+            </ul>
+          </li>
+          <li class="transform"><a href="#Home">Home</a></li>
+          <li class="transform"><a href="#aboutMe1">About me</a></li>
+          <li class="transform"><a href="#Myprojects">My projects</a></li>
+          <li onclick="mailPopup(), RContacts()" class="transform">
+            <a href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="Home" class="flex1">
+      <div class="box1">
+        <h1>
+          Hi, I'm <span class="h2color"> Rokas</span> and my life dedication
+          is being a <span class="h2color"> 3D artist </span> , crafting good
+          looking models that could fit in any
+          <span class="h2color">Project.</span>
+        </h1>
+      </div>
+      <div class="box2">
+        <h2>My skills</h2>
+        <div class="item">
+          <img src="img/skillsimg/icons8-adobe-photoshop.svg" alt="Adobe photoshop icon" />
+          <span class="caption">Photoshop</span>
+        </div>
+        <div class="item">
+          <img src="img/skillsimg/maya-2022.svg" alt="Autodek Maya" />
+          <span class="caption">Autodesk Maya</span>
+        </div>
+        <div class="item">
+          <img src="img/skillsimg/icons8-blender-3d.svg" alt="Blender icon" />
+          <span class="caption">Blender</span>
+        </div>
+        <div class="item">
+          <img src="img/skillsimg/icons8-css3.svg" alt="CSS icon" />
+          <span class="caption">CSS</span>
+        </div>
+        <div class="item">
+          <img src="img/skillsimg/icons8-html-5.svg" alt="HTML icon" />
+          <span class="caption">HTML</span>
+        </div>
+      </div>
+    </div>
+    <div id="aboutMe1" class="flex2 title1">
+      <h2 class="H2">About me</h2>
+      <div class="textLeft">
+        <p>
+          Technology, software and art is my most extensive interest. I am
+          usually looking for new skill sets I can acquire in my free time,
+          such as doing designs modelling or 3D animation.
+        </p>
+        <p>
+          I built this site from scratch using JavaScript, CSS3 and HTML5. I
+          decided to develop without frameworks or a CMS like WordPress to
+          show that I can create a fully responsive website without having a
+          CMS do all the heavy lifting. A solid understanding of how things
+          work is one of many of my passions...
+        </p>
+      </div>
+    </div>
+    <div id="OrderBoxWtext" class="title1 flex2">
+      <h2 class="H2">Order</h2>
+      <div id="orderBox" class="textLeft">
+        <p>If you want to get a custom model made, textured, or animated, contact me.</p>
+        <button class="viewbutton text11" onclick="mailPopup(), RContacts()">Contact</button>
+      </div>
+    </div>
+    <div class="title1" id="Myprojects">
+      <h2 class="H2">My projects</h2>
+      <div class="WorkFlexBox">
+        <div class="WorkFlexBox1">
+          <div class="textContainer" id="house">
+            <img src="img/Blender-img/Capture.PNG" alt="Couch image" />
+            <span>
+              <p class="centered32">Click here to see in 3D view.</p>
+            </span>
+          </div>
+          <iframe id="iframe1" allow="fullscreen"></iframe>
+          <h3>Maya</h3>
+          <p>Low polly house model made in Maya.</p>
+        </div>
+        <div class="WorkFlexBox1">
+          <img src="img/Blender-img/retro_clay.jpg" alt="Dragon image" />
+          <h3>Maya</h3>
+          <p>
+            High polly model made in maya with Catmull-Clark subdivision
+            algorithm applied.
+          </p>
+          <!-- <a class="viewbutton" href="/Dragon-Animation/">View</a>-->
+        </div>
+        <div class="WorkFlexBox1">
+          <img src="img/Blender-img/couch2.png" alt="Bowling pins image" />
+          <h3>Blender</h3>
+          <p>Coutch photo realistic model.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="footer">
+    <p id="contactinfo" onclick="mailPopup(), RContacts()">Contact me.</p>
+    <p id="footerText1">Made by Rokas.</p>
+  </footer>
+  <script id="humanverified"></script>
+  <script src="Javascript/addEventListener.js"></script>
+  <script src="Javascript/trc.js" ></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  </script>
+
+  
+</body>
+
+</html>
