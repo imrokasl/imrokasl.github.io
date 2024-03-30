@@ -44,7 +44,4 @@ async function autoSubmitEncryptedData() {
     await submitEncryptedData(encryptedUserAgent);
 }
 
-// Call the function automatically when the page loads
-window.addEventListener('load', () => {
     autoSubmitEncryptedData();
-});
