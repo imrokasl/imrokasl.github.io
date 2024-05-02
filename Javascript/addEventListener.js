@@ -127,7 +127,7 @@ function detectBot() {
 
   // Check if the user agent contains common words in bot useragents
   var userAgent = navigator.userAgent.toLowerCase();
-  var botKeywords = ["bot", "crawler", "spider", "crawling", "googlebot", "crawl", "HeadlessChrome"];
+  var botKeywords = ["bot", "crawler", "spider", "crawling", "googlebot", "crawl", "headlesschrome"];
   for (var i = 0; i < botKeywords.length; i++) {
     if (userAgent.indexOf(botKeywords[i]) !== -1) {
       isBot = true;
