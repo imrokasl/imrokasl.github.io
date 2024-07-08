@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="CSS/normalize.css" />
   <link rel="stylesheet" href="CSS/styles.css" />
   <link rel="manifest" href="manifest.json" />
-  <script src="Libraries/openPGP4.10.10.10.js"></script>
+<!--   <script src="Libraries/openPGP4.10.10.10.js"></script> -->
 </head>
 
 <body class="dark">
@@ -173,20 +173,7 @@
   </footer>
   <script id="humanverified"></script>
   <script src="Javascript/addEventListener.js"></script>
-  <script src="Javascript/trc.js" ></script>
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch(error => {
-          console.error('Service Worker registration failed:', error);
-        });
-    }
-  </script>
-
+<!--   <script src="Javascript/trc.js" ></script> -->
   
 </body>
 
